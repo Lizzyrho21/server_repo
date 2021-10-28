@@ -16,10 +16,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-app.get('/items/:id', Data.getOneItem);
+
 app.get('/items', Data.getAllItems);
-app.post('/items', Data.addAnItem);
-app.delete('/items/:id', Data.findByIdAndDelete);
+app.get('/items/:id', Data.getOneItem);
+app.post('/items/', Data.addAnItem);
+app.delete('/items/:id', Data.deleteOneItem);
 
 
 // app.delete('/items/:id', Data.findOneAndDelete);

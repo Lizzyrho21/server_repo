@@ -25,7 +25,7 @@ class Items extends React.Component {
                   <td>{item.name}</td>
                   <td>{item.description}</td>
                   <td>
-                    <Button onClick={this.props.delete} data-testid={`delete-button-${item.name}`}>Delete Item</Button>
+                    <Button key={idx} onClick={() => this.props.delete(item._id)} data-testid={`delete-button-${item.name}`}>Delete Item</Button>
                   </td>
                 </tr>
               )
